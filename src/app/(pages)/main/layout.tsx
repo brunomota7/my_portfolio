@@ -15,8 +15,8 @@ export default function MainLayout({
 }>) {
   return (
     <div className="relative w-full min-h-screen bg-gray-900 text-white overflow-hidden">
-      <div className="fixed inset-0 z-1">
-        <Particles id="tsparticles-global" />
+      <div className="fixed inset-0 z-1 h-screen">
+        <Particles />
       </div>
       {children}
     </div>

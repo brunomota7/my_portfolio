@@ -5,7 +5,7 @@ import Bruno from "../../../public/images/bruno.png";
 
 export function Banner() {
     return (
-        <div className="relative w-full text-white">
+        <div className="relative w-full h-screen flex flex-col items-center justify-center text-white">
             <section className="flex flex-row items-center justify-center gap-12 py-16">
                 <motion.div 
                     initial={{ opacity: 0, x: -100 }}
