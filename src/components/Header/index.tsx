@@ -1,8 +1,7 @@
-'use client'
+'use client';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import Logo from '../../../public/images/logo.png';
-import Particles from '../ui/particles';
 
 export function Header() {
     const itemLink = [
@@ -13,13 +12,12 @@ export function Header() {
     ];
 
     return (
-        <header className="relative w-full bg-gray-900 text-white">
-            <Particles id="tsparticles-header" />
+        <header className="relative w-full bg-transparent text-white">
             <motion.div 
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="absolute top-0 left-0 w-full h-16 px-8 md:px-40 flex items-center justify-between">
+                className="top-0 left-0 w-full h-16 px-8 md:px-40 flex items-center justify-between z-10">
                 <section>
                     <Image 
                         src={Logo}

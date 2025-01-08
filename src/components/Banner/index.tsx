@@ -2,11 +2,11 @@
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import Bruno from "../../../public/images/bruno.png";
-export function About() {
+
+export function Banner() {
     return (
-        <div className="w-full h-auto bg-gray-900 from-gray-800 to-gray-900 text-white flex items-center justify-center p-8 md:p-16">
-            <section 
-                className="flex flex-row items-center justify-center gap-12">
+        <div className="relative w-full text-white">
+            <section className="flex flex-row items-center justify-center gap-12 py-16">
                 <motion.div 
                     initial={{ opacity: 0, x: -100 }}
                     animate={{ opacity: 1, x: 0 }}
