@@ -2,10 +2,9 @@
 import Image from "next/image";
 import { motion } from 'framer-motion';
 import Bruno from "../../../public/images/bruno.png";
-
 export function About() {
     return (
-        <div className="w-full min-h-screen bg-gradient-to-b from-gray-800 to-gray-900 text-white flex items-center justify-center p-8 md:p-16">
+        <div className="w-full h-auto bg-gray-900 from-gray-800 to-gray-900 text-white flex items-center justify-center p-8 md:p-16">
             <section 
                 className="flex flex-row items-center justify-center gap-12">
                 <motion.div 
