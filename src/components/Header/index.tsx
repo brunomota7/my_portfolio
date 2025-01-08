@@ -12,12 +12,12 @@ export function Header() {
     ];
 
     return (
-        <header className="relative w-full bg-transparent text-white">
+        <header className="relative w-full h-auto flex items-center justify-center bg-transparent text-white">
             <motion.div 
                 initial={{ y: -100, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="top-0 left-0 w-full h-16 px-8 md:px-40 flex items-center justify-between z-10">
+                className="top-0 left-0 w-4/5 px-8 md:px-40 flex items-center justify-between z-10">
                 <section>
                     <Image 
                         src={Logo}
@@ -34,7 +34,7 @@ export function Header() {
                             href={link}
                             whileHover={{ scale: 1.1 }}
                             whileTap={{ scale: 0.9 }}
-                            className="text-lg font-medium hover:text-sky-500 transition-colors">
+                            className="text-lg font-light hover:text-sky-500 transition-colors">
                             {name}
                         </motion.a>
                     ))}
