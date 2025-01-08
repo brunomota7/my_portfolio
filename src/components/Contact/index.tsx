@@ -1,7 +1,7 @@
 'use client'
 /* import { motion } from 'framer-motion';
 import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa'; */
-import { Mail, MapPin, Phone } from 'lucide-react';
+import { Mail, Phone } from 'lucide-react';
 
 // Componente de Contato
 export default function Contact() {
