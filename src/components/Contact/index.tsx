@@ -5,22 +5,8 @@ import { FaEnvelope, FaLinkedin, FaGithub } from 'react-icons/fa';
 
 // Componente de Contato
 export default function Contact() {
-    const [formData, setFormData] = useState({ name: '', email: '', message: '' });
-    const [status, setStatus] = useState('');
+    const [status] = useState('');
 
-    const handleChange = (e) => {
-        const { name, value } = e.target;
-        setFormData({ ...formData, [name]: value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        if (!formData.name || !formData.email || !formData.message) {
-            setStatus('Preencha todos os campos!');
-            return;
-        }
-        setStatus('Mensagem enviada com sucesso!');
-    };
 
     return (
         <div className="w-full p-8 grid md:grid-cols-2 gap-8 bg-gray-900 text-white">
@@ -45,10 +31,10 @@ export default function Contact() {
                 initial={{ opacity: 0, x: 100 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.5 }}
-                className="flex flex-col gap-4" onSubmit={handleSubmit}>
-                <input name="name" placeholder="Nome" className="p-3 rounded-md bg-gray-800" onChange={handleChange} />
-                <input name="email" placeholder="E-mail" className="p-3 rounded-md bg-gray-800" onChange={handleChange} />
-                <textarea name="message" placeholder="Mensagem" className="p-3 rounded-md bg-gray-800" onChange={handleChange}></textarea>
+                className="flex flex-col gap-4">
+                <input name="name" placeholder="Nome" className="p-3 rounded-md bg-gray-800" />
+                <input name="email" placeholder="E-mail" className="p-3 rounded-md bg-gray-800" />
+                <textarea name="message" placeholder="Mensagem" className="p-3 rounded-md bg-gray-800" ></textarea>
                 <motion.button 
                     whileTap={{ scale: 0.9 }}
                     transition={{ duration: 0.3 }}
