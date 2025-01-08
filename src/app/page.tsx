@@ -1,5 +1,6 @@
 'use client'
 import RetroGrid from '@/components/ui/retro-grid';
+import ShinyButton from '@/components/ui/shiny-button';
 import { CodeXml, User, Github } from 'lucide-react';
 import { motion } from 'motion/react';
 
@@ -76,17 +77,11 @@ export default function Home() {
         </motion.div>
 
         {/* Botão */}
-        <motion.button
-          whileHover={{ scale: 1.1 }}
-          whileTap={{ scale: 0.9 }}
-          initial={{ opacity: 0, x: 100 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          exit={{ opacity: 0, x: 100 }}
-          transition={{ duration: 0.8 }}
+        <ShinyButton
           onClick={() => window.location.href = '/main'}
-          className="px-6 py-2 mt-4 text-white font-semibold bg-[#9333ea] rounded-lg shadow-lg text-sm md:text-base">
+        >
           Next
-        </motion.button>
+        </ShinyButton>
       </section>
 
       <RetroGrid />
