@@ -4,14 +4,24 @@ import { motion } from 'framer-motion';
 import { FaEye, FaGithub, FaHtml5, FaNode, FaReact } from "react-icons/fa";
 import { RiNextjsFill } from "react-icons/ri";
 
-const techIcons = {
+type Technology = 'HTML5' | 'NodeJS' | 'NextJS' | 'ReactJS';
+
+const techIcons: Record<Technology, React.ComponentType> = {
     HTML5: FaHtml5,
     NodeJS: FaNode,
     NextJS: RiNextjsFill,
     ReactJS: FaReact,
 };
 
-const projects = [
+const projects: {
+    title: string;
+    description: string;
+    status: string;
+    image: string;
+    github: string;
+    liveDemo: string;
+    technologies: Technology[];
+}[] = [
     {
         title: "Cultive+",
         description: "Descrição do projeto Cultive+.",
@@ -102,9 +112,7 @@ export default function Projects() {
                                         className="text-white text-xl"
                                         title={tech}
                                     >
-                                        <Icon
-                                            className="w-8 h-8"
-                                        />
+                                        <Icon className="w-8 h-8"/>
                                     </motion.div>
                                 );
                             })}
