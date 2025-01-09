@@ -8,8 +8,8 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Bruno Mota - Portfólio",
-  description: "Full Stack Developer",
+  title: "Portfólio - Bruno Mota",
+  description: "Desenvolvedor Full Stack com experiência em tecnologias modernas e paixão por resolver problemas.",
 };
 
 export default function RootLayout({
