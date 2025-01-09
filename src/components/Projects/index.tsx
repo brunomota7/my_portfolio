@@ -6,7 +6,7 @@ import { RiNextjsFill } from "react-icons/ri";
 
 type Technology = 'HTML5' | 'NodeJS' | 'NextJS' | 'ReactJS';
 
-const techIcons: Record<Technology, React.ComponentType> = {
+const techIcons: Record<Technology, React.ElementType> = {
     HTML5: FaHtml5,
     NodeJS: FaNode,
     NextJS: RiNextjsFill,
