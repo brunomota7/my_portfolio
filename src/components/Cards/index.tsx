@@ -3,7 +3,6 @@ import { useState } from "react";
 import { motion } from 'framer-motion';
 import Projects from "../Projects";
 import Education from "../Education";
-import Skills from "../Skills";
 
 export default function Cards() {
     const [activeContent, setActiveContent] = useState('Projetos');
@@ -20,8 +19,6 @@ export default function Cards() {
                 return <Projects />;
             case 'Educação':
                 return <Education />;
-            case 'Skills':
-                return <Skills />;
             default:
                 return <Projects />;
         }

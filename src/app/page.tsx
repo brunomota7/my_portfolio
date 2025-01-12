@@ -13,7 +13,7 @@ export default function Home() {
   ];
 
   // Animação de texto digitando
-  const text = "www.brunomotadev.com";
+  const text = "Dev Full Stack";
   const container = {
     hidden: { opacity: 0 },
     visible: (i = 1) => ({
@@ -57,7 +57,7 @@ export default function Home() {
           exit={{ opacity: 0, x: 100 }}
           transition={{ duration: 0.8 }}
           className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent text-center">
-          Portfolio Website
+          Bruno Mota
         </motion.h2>
       </section>
 
@@ -78,7 +78,7 @@ export default function Home() {
 
         {/* Botão */}
         <ShinyButton
-          onClick={() => window.location.href = '/main'}
+          onClick={() => window.location.href = '/dashboard'}
         >
           Next
         </ShinyButton>

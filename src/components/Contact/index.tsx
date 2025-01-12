@@ -4,7 +4,7 @@ import { FaEnvelope, FaLinkedin, FaGithub, FaPhone } from 'react-icons/fa';
 
 export default function Contact() {
     return (
-        <section className="relative w-full h-auto mb-12 flex items-center justify-center px-4 md:px-0" id='Contact'>
+        <section className="relative w-full h-auto flex items-center justify-center px-4 md:px-0">
             <div className="w-full md:w-4/5 flex flex-col md:flex-row items-center justify-center">
                 <motion.div 
                     initial={{ opacity: 0 }}
