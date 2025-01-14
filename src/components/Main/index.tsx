@@ -1,6 +1,5 @@
 'use client'
 import { useState } from "react";
-import { About } from "../About";
 import Education from "../Education";
 import Projects from "../Projects";
 import Contact from "../Contact";
@@ -10,6 +9,8 @@ import { PiUserListFill } from "react-icons/pi";
 import { FaUniversity } from "react-icons/fa";
 import { MdDashboard } from "react-icons/md";
 import { GrContact } from "react-icons/gr";
+import About from "../About";
+import "../../styles/scrollbar.css";
 
 export default function Main() {
     const [isOpen, setIsOpen] = useState(false);
@@ -119,7 +120,7 @@ export default function Main() {
                 initial={{ opacity: 0, top: 100 }}
                 whileInView={{ opacity: 1, top: 0 }}
                 transition={{ duration: 0.6 }}
-                className={`flex-1 mt-2 lg:mt-0 ml-0 lg:ml-1 bg-white/10 rounded-md transition-all duration-300 ease-in-out`}
+                className={`flex-1 overflow-y-auto mt-2 lg:mt-0 ml-0 lg:ml-1 bg-white/10 rounded-md transition-all duration-300 ease-in-out scrollbar`}
             >
                 <motion.div
                     key={activeContent}
