@@ -44,7 +44,7 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="bg-white/10 p-6 rounded-lg shadow-md"
         >
-            <h2 className="text-2xl font-bold text-fuchsia-400">Sobre Mim</h2>
+            <h2 className="text-2xl font-bold">Sobre Mim</h2>
             <p className="mt-4 text-lg">
             Olá! Meu nome é Bruno Mota, tenho 20 anos e sou aspirante a desenvolvedor Full Stack. 
             Atualmente, curso Engenharia de Computação na Universidade Ceuma e tenho experiência 
@@ -59,7 +59,7 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="bg-white/10 p-6 rounded-lg shadow-md"
         >
-            <h2 className="text-2xl font-bold text-fuchsia-400">Experiência</h2>
+            <h2 className="text-2xl font-bold">Experiência</h2>
             <div className="flex flex-col mt-6 gap-6">
             {timeline.map((item, index) => (
                 <motion.div
@@ -87,7 +87,7 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="bg-white/10 p-6 rounded-lg shadow-md"
         >
-            <h2 className="text-2xl font-bold text-fuchsia-400">Hard Skills</h2>
+            <h2 className="text-2xl font-bold">Hard Skills</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
             {hardSkills.map((skill, index) => (
                 <div key={index}>
@@ -113,7 +113,7 @@ export default function About() {
             transition={{ duration: 0.5 }}
             className="bg-white/10 p-6 rounded-lg shadow-md"
         >
-            <h2 className="text-2xl font-bold text-fuchsia-400">Soft Skills</h2>
+            <h2 className="text-2xl font-bold">Soft Skills</h2>
             <div className="flex flex-wrap gap-6 mt-6">
             {softSkills.map((skill, index) => (
                 <div

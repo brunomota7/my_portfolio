@@ -1,7 +1,5 @@
 import type { Metadata } from "next";
 import "../../../styles/globals.css";
-import Particles from "@/components/ui/particles";
-
 
 export const metadata: Metadata = {
   title: "Bruno Mota - Portfólio | Main",
@@ -15,9 +13,6 @@ export default function MainLayout({
 }>) {
   return (
     <div className="relative w-full min-h-screen bg-gray-900 text-white overflow-hidden">
-      <div className="fixed inset-0 z-1 h-screen">
-        <Particles />
-      </div>
       {children}
     </div>
   );
