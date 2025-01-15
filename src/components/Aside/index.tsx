@@ -47,7 +47,7 @@ export default function Aside() {
             <section className="w-4/5 h-20 flex flex-col items-left gap-4"> 
                 <div className="flex items-left gap-4"> {/* Social Midia */}
                     <motion.a 
-                        href="#"
+                        href="https://github.com/brunomota7"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         className="flex gap-2 items-center">
@@ -55,7 +55,7 @@ export default function Aside() {
                         <span className="text-lg font-nomral">GitHub</span>
                     </motion.a>
                     <motion.a 
-                        href="#"
+                        href="https://www.linkedin.com/in/bruno-mota-dev/"
                         whileHover={{ scale: 1.1 }}
                         whileTap={{ scale: 0.9 }}
                         className="flex gap-2 items-center">

@@ -49,7 +49,7 @@ export default function Contact() {
                             whileTap={{ scale: 0.9 }}
                             transition={{ duration: 0.5 }}
                             title='Linkedin'
-                            href='#'
+                            href='ttps://www.linkedin.com/in/bruno-mota-dev/'
                             className='cursor-pointer'>
                             <FaLinkedin className="text-white w-6 h-6 md:w-8 md:h-8 hover:text-fuchsia-400" />
                         </motion.a>
@@ -58,7 +58,7 @@ export default function Contact() {
                             whileTap={{ scale: 0.9 }}
                             transition={{ duration: 0.5 }}
                             title='GitHub'
-                            href='#'
+                            href='https://github.com/brunomota7v'
                             className='cursor-pointer'>
                             <FaGithub className="text-white w-6 h-6 md:w-8 md:h-8 hover:text-fuchsia-400" />
                         </motion.a>

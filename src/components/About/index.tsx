@@ -37,95 +37,95 @@ export default function About() {
 
     return (
         <div className="flex flex-col w-full gap-6 p-6 text-white">
-        {/* Introdução */}
-        <motion.section
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white/10 p-6 rounded-lg shadow-md"
-        >
-            <h2 className="text-2xl font-bold">Sobre Mim</h2>
-            <p className="mt-4 text-lg">
-            Olá! Meu nome é Bruno Mota, tenho 20 anos e sou aspirante a desenvolvedor Full Stack. 
-            Atualmente, curso Engenharia de Computação na Universidade Ceuma e tenho experiência 
-            em tecnologias como Java, Python, Node.js, React, e muito mais.
-            </p>
-        </motion.section>
+            {/* Introdução */}
+            <motion.section
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/10 p-6 rounded-lg shadow-md"
+            >
+                <h4 className="text-2xl font-bold">Olá, seja bem-vindo(a) ao meu portfólio!</h4>
+                <p className="mt-4 text-lg">
+                    Meu nome é Bruno Mota, sou um aspirante a desenvolvedor Full Stack e atualmente curso o sétimo período de Engenharia de Computação na Universidade Ceuma. 
+                    Tenho conhecimento em diversas tecnologias, incluindo Java, JavaScript (Node.js), Python, MySQL, Next.js, HTML, CSS, TailwindCSS, TypeScript, Spring e C. 
+                    Com uma paixão por resolver problemas, busco criar soluções criativas e funcionais que impactem positivamente pessoas e comunidades.
+                </p>
+            </motion.section>
 
-        {/* Experiência */}
-        <motion.section
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white/10 p-6 rounded-lg shadow-md"
-        >
-            <h2 className="text-2xl font-bold">Experiência</h2>
-            <div className="flex flex-col mt-6 gap-6">
-            {timeline.map((item, index) => (
-                <motion.div
-                key={index}
-                initial={{ opacity: 0, x: -50 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.3, delay: index * 0.2 }}
-                className="flex items-start gap-4"
-                >
-                <div className="w-2 h-2 mt-2 bg-fuchsia-400 rounded-full"></div>
-                <div>
-                    <h3 className="text-lg font-bold">{item.company}</h3>
-                    <p className="text-sm text-gray-300">{item.role}</p>
-                    <p className="text-sm text-gray-400">{item.time}</p>
+            {/* Experiência */}
+            <motion.section
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/10 p-6 rounded-lg shadow-md"
+            >
+                <h2 className="text-2xl font-bold">Experiência</h2>
+                <div className="flex flex-col mt-6 gap-6">
+                {timeline.map((item, index) => (
+                    <motion.div
+                    key={index}
+                    initial={{ opacity: 0, x: -50 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.3, delay: index * 0.2 }}
+                    className="flex items-start gap-4"
+                    >
+                    <div className="w-2 h-2 mt-2 bg-fuchsia-400 rounded-full"></div>
+                    <div>
+                        <h3 className="text-lg font-bold">{item.company}</h3>
+                        <p className="text-sm text-gray-300">{item.role}</p>
+                        <p className="text-sm text-gray-400">{item.time}</p>
+                    </div>
+                    </motion.div>
+                ))}
                 </div>
-                </motion.div>
-            ))}
-            </div>
-        </motion.section>
+            </motion.section>
 
-        {/* Hard Skills */}
-        <motion.section
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white/10 p-6 rounded-lg shadow-md"
-        >
-            <h2 className="text-2xl font-bold">Hard Skills</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
-            {hardSkills.map((skill, index) => (
-                <div key={index}>
-                <div className="flex items-center gap-4">
+            {/* Hard Skills */}
+            <motion.section
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/10 p-6 rounded-lg shadow-md"
+            >
+                <h2 className="text-2xl font-bold">Hard Skills</h2>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
+                {hardSkills.map((skill, index) => (
+                    <div key={index}>
+                    <div className="flex items-center gap-4">
+                        {skill.icon}
+                        <h3 className="text-lg font-bold">{skill.name}</h3>
+                    </div>
+                    <div className="w-full bg-gray-700 h-2 rounded-md mt-2">
+                        <div
+                        className="h-2 bg-fuchsia-400 rounded-md"
+                        style={{ width: `${skill.level}%` }}
+                        ></div>
+                    </div>
+                    </div>
+                ))}
+                </div>
+            </motion.section>
+
+            {/* Soft Skills */}
+            <motion.section
+                initial={{ opacity: 0, y: 50 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+                className="bg-white/10 p-6 rounded-lg shadow-md"
+            >
+                <h2 className="text-2xl font-bold">Soft Skills</h2>
+                <div className="flex flex-wrap gap-6 mt-6">
+                {softSkills.map((skill, index) => (
+                    <div
+                    key={index}
+                    className="flex items-center gap-4 bg-gray-700/50 p-4 rounded-md shadow-md"
+                    >
                     {skill.icon}
                     <h3 className="text-lg font-bold">{skill.name}</h3>
+                    </div>
+                ))}
                 </div>
-                <div className="w-full bg-gray-700 h-2 rounded-md mt-2">
-                    <div
-                    className="h-2 bg-fuchsia-400 rounded-md"
-                    style={{ width: `${skill.level}%` }}
-                    ></div>
-                </div>
-                </div>
-            ))}
-            </div>
-        </motion.section>
-
-        {/* Soft Skills */}
-        <motion.section
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            className="bg-white/10 p-6 rounded-lg shadow-md"
-        >
-            <h2 className="text-2xl font-bold">Soft Skills</h2>
-            <div className="flex flex-wrap gap-6 mt-6">
-            {softSkills.map((skill, index) => (
-                <div
-                key={index}
-                className="flex items-center gap-4 bg-gray-700/50 p-4 rounded-md shadow-md"
-                >
-                {skill.icon}
-                <h3 className="text-lg font-bold">{skill.name}</h3>
-                </div>
-            ))}
-            </div>
-        </motion.section>
+            </motion.section>
         </div>
     );
 }
