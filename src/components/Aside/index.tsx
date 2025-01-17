@@ -66,8 +66,8 @@ export default function Aside() {
                     title="Download Currículo"
                     className="w-auto h-[40] p-2 flex items-center justify-center rounded-lg bg-fuchsia-600/50 hover:bg-fuchsia-700/50"> {/* Btn Download Curriculo */}
                     <a 
-                    href="#"
-                    download="curriculo_Bruno_Mota.pdf"
+                    href="/public/curriculo/curriculo_Bruno_Eduardo_Pinheiro_Mota.pdf"
+                    download="curriculo_Bruno_Eduardo_Pinheiro_Mota.pdf"
                     className="w-full h-full flex items-center justify-center gap-2 font-semibold">
                         <FaDownload />
                         Download Currículo

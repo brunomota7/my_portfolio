@@ -1,53 +1,63 @@
 'use client';
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 import { motion } from "framer-motion";
 import { FaEye, FaGithub, FaHtml5, FaNode, FaReact } from "react-icons/fa";
-import { RiNextjsFill } from "react-icons/ri";
+import { RiNextjsFill, RiTailwindCssFill } from "react-icons/ri";
+import { SiTypescript } from "react-icons/si";
+import { IoLogoCss3, IoLogoJavascript } from "react-icons/io";
 
-type Technology = "HTML5" | "NodeJS" | "NextJS" | "ReactJS";
+import CultiveImg from "../../../public/projects/cultive.jpg";
+import SafeAlert from "../../../public/projects/safe_alert.jpg";
+import DevBurguer from "../../../public/projects/dev_burger.jpg";
+
+type Technology = "HTML5" | "NodeJS" | "NextJS" | "ReactJS" | "TailwindCss" | "Typescript" | "Javascript" | "Css3";
 
 const techIcons: Record<Technology, React.ElementType> = {
   HTML5: FaHtml5,
   NodeJS: FaNode,
   NextJS: RiNextjsFill,
   ReactJS: FaReact,
+  TailwindCss: RiTailwindCssFill,
+  Typescript: SiTypescript,
+  Javascript: IoLogoJavascript,
+  Css3: IoLogoCss3
 };
 
 const projects: {
   title: string;
   description: string;
   status: string;
-  image: string;
+  image: StaticImageData;
   github: string;
   liveDemo: string;
   technologies: Technology[];
 }[] = [
   {
     title: "Cultive+",
-    description: "Descrição do projeto Cultive+.",
+    description: "A Cultive+ é uma plataforma inovadora voltada para apoiar pequenos e médios agricultores, oferecendo funcionalidades como gestão de cultivos, previsão do tempo e uma área de vendas online.",
     status: "Em desenvolvimento",
-    image: "/images/image0_0.jpg",
-    github: "#",
-    liveDemo: "#",
-    technologies: ["HTML5", "NodeJS", "NextJS"],
+    image: CultiveImg,
+    github: "https://github.com/brunomota7/cultive-frontend",
+    liveDemo: "https://cultive-frontend.vercel.app",
+    technologies: ["NextJS", "TailwindCss", "Typescript", "Javascript"],
   },
   {
-    title: "Projeto 2",
-    description: "Descrição do projeto 2.",
+    title: "SafeAlert",
+    description: "Uma plataforma para mostrar áreas de alagamento em tempo real em São Luís - MA.",
     status: "Concluído",
-    image: "/images/image0_0.jpg",
-    github: "#",
-    liveDemo: "#",
-    technologies: ["ReactJS", "NodeJS"],
+    image: SafeAlert,
+    github: "https://github.com/brunomota7/safe_alert",
+    liveDemo: "https://safealert.vercel.app",
+    technologies: ["HTML5", "Css3", "Javascript"],
   },
   {
-    title: "Projeto 3",
-    description: "Descrição do projeto 3.",
+    title: "Dev Burguer",
+    description: "Pequeno projeto de uma atendimento totalmente funcional com integração ao WhatsApp da lanchonete.",
     status: "Concluído",
-    image: "/images/image0_0.jpg",
-    github: "#",
-    liveDemo: "#",
-    technologies: ["HTML5", "NextJS"],
+    image: DevBurguer,
+    github: "https://github.com/brunomota7/sistema-lanchonete",
+    liveDemo: "https://sistema-lanchonete.vercel.app",
+    technologies: ["HTML5", "Css3", "Javascript"],
   },
 ];
 
@@ -112,7 +122,7 @@ export default function Projects() {
                     className="text-white text-xl"
                     title={tech}
                   >
-                    <Icon className="w-8 h-8" />
+                    <Icon className="w-6 h-6" />
                   </motion.div>
                 );
               })}

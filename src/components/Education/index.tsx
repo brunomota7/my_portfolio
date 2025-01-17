@@ -10,26 +10,37 @@ import JavaConsumindoApi from "../../../public/certificados/Java-consumindoAPI-g
 import JavaTrabalhandoComListasEColecoes from "../../../public/certificados/Java-TrabalhandoComListasColecaoDeDados.jpg";
 import JavaNwlUnite from "../../../public/certificados/NLW-Unite-Java-Rocketseat.jpg";
 
+import JsCriePaginasDinamicas from "../../../public/certificados/JavaScriptParaWeb-CriePáginasDinâmicas.pdf.jpg";
+import JsManipulandoDOM from "../../../public/certificados/JavaScript-ManipulandoElementosNoDOM.pdf.jpg";
+import JsValidandoForm from "../../../public/certificados/JavaScript-ValidandoFormulários.pdf.jpg";
+import JsConsumindoApi from "../../../public/certificados/JavaScript-ConsumindoETratandoDadosDeUmaAPI.pdf.jpg";
+import JsCriandoRequisicoes from "../../../public/certificados/JavaScript-CriandoRequisições.pdf.jpg";
+
 export default function Education() {
     const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
     const academicWorks = [
         {
-            title: "Análise de Algoritmos de Ordenação",
-            description: "Desenvolvimento de um relatório comparativo entre diferentes algoritmos de ordenação, abordando eficiência e casos de uso.",
-            year: 2023,
+            title: "Cultive+",
+            description: "A Cultive+ é uma plataforma inovadora voltada para apoiar pequenos e médios agricultores, oferecendo funcionalidades como gestão de cultivos, previsão do tempo e uma área de vendas online. Ela conecta agricultores a compradores, facilitando a comercialização de produtos e promovendo o desenvolvimento agrícola sustentável.",
+            year: 2024,
+            status: "Em desenvolvimento"
         },
         {
-            title: "Sistema de Gestão para Pequenos Agricultores",
-            description: "Projeto integrador focado na criação de uma plataforma para gestão de plantações e vendas.",
+            title: "Modulação de sinais de amplitude (AM) e frequência (FM) usando dados de temperatura",
+            description: "Este projeto utiliza dados de variação de temperatura para demonstrar conceitos de modulação de sinais, como AM (modulação de amplitude) e FM (modulação de frequência). Ele permite ajustar parâmetros como frequência e amplitude da onda portadora, mostrando visualmente como essas alterações afetam os sinais modulados. É uma aplicação prática para entender fundamentos de comunicação de sinais.",
             year: 2024,
+            status: "Concluído"
         },
     ];
 
     const certifications = {
         frontend: [
-            { title: "React.js Avançado", provider: "Udemy", year: 2023, image: JavaCriandoSuaPrimeiraAplicacao },
-            { title: "CSS com Tailwind", provider: "Alura", year: 2023, image: JavaCriandoSuaPrimeiraAplicacao },
+            { title: "JavaScript: Crie páginas dinâmicas", provider: "Alura", year: 2023, image: JsCriePaginasDinamicas },
+            { title: "JavaScript: Manipulando elementos no DOM", provider: "Alura", year: 2023, image: JsManipulandoDOM },
+            { title: "JavaScript: Validando formulários", provider: "Alura", year: 2023, image: JsValidandoForm },
+            { title: "JavaScript: Consumindo e tratando dados de uma API", provider: "Alura", year: 2023, image: JsConsumindoApi },
+            { title: "JavaScript: Criando requisições", provider: "Alura", year: 2023, image: JsCriandoRequisicoes },
         ],
         backend: [
             { title: "Java: Criando sua primeira aplicação", provider: "Alura", year: 2024, image: JavaCriandoSuaPrimeiraAplicacao },
@@ -38,10 +49,7 @@ export default function Education() {
             { title: "Java: Trabalhando com listas e coleções de dados", provider: "Alura", year: 2024, image: JavaTrabalhandoComListasEColecoes },
             { title: "Java: NWL Unite", provider: "Rocetseat", year: 2024, image: JavaNwlUnite },
         ],
-        tools: [
-            { title: "Git e GitHub", provider: "Rocketseat", year: 2022, image: JavaCriandoSuaPrimeiraAplicacao },
-            { title: "Docker Essentials", provider: "Digital Innovation One", year: 2023, image: JavaAplicandoOrientacaoObjeto },
-        ],
+        /* tools: [], */
     };
 
     return (
@@ -79,6 +87,16 @@ export default function Education() {
                             >
                                 <h3 className="text-xl font-semibold text-fuchsia-400">{work.title}</h3>
                                 <p className="text-gray-300 mt-2">{work.description}</p>
+                                <div className='w-full flex items-center gap-1 mt-2'>
+                                    <span
+                                        className={`w-3 h-3 rounded-full ${
+                                        work.status === "Concluído"
+                                            ? "bg-green-400"
+                                            : "bg-yellow-400"
+                                        }`}
+                                    ></span>
+                                    <p className='text-gray-400 text-sm'>{work.status}</p>
+                                </div>
                                 <span className="text-sm text-gray-500 mt-2 block">Ano: {work.year}</span>
                             </div>
                         ))}
